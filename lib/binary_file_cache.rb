@@ -26,9 +26,7 @@ module BinaryFileCache
   end
 
   def self.calculate_md5sums(input_files)
-    input_files.map { |file|
-      Digest::MD5.file(file).hexdigest
-    }
+    input_files.map { |file| Digest::MD5.file(file).hexdigest }
   end
 
   def self.read_md5sums(md5_filename)
